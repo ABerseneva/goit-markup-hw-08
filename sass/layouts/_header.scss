@@ -1,0 +1,120 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo {
+  font-family: Raleway, serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: $color-black;
+  margin-right: 93px;
+}
+
+.logo-accent {
+  color: $accent-color;
+}
+
+.nav__list {
+  display: flex;
+  gap: 50px;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $title-text-color;
+  position: relative;
+  display: block;
+  padding: 32px 0;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+  }
+}
+
+.nav__link.current {
+  color: $accent-color;
+}
+
+.current::after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  bottom: -1px;
+  border-radius: 2px;
+  background-color: $accent-color;
+  position: absolute;
+  display: block;
+}
+
+.contacts__list {
+  display: flex;
+  margin-left: auto;
+  gap: 50px;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__link {
+  color: $primary-text-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+  }
+}
+
+.contacts__icon {
+  fill: $primary-text-color;
+  margin-right: 10px;
+  transition-duration: 250ms;
+  transition-timing-function: $timing-function;
+  .contacts__link:hover,
+  .contacts__link:hover & {
+    fill: $accent-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+  }
+  .contacts__link:focus,
+  .contacts__link:focus & {
+    fill: $accent-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+  }
+}

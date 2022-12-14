@@ -1,0 +1,33 @@
+.feature {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__wrap {
+    background-color: #f5f4fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  &__title {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $title-text-color;
+
+    padding-bottom: 10px;
+    padding-top: 30px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+  }
+}
