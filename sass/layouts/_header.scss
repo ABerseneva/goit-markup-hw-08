@@ -20,7 +20,7 @@
   letter-spacing: 0.03em;
   text-decoration: none;
   color: $color-black;
-  margin-right: 93px;
+  // margin-right: 93px;
 }
 
 .logo-accent {
@@ -30,11 +30,13 @@
 .nav__list {
   display: flex;
   gap: 50px;
+  display: none;
 }
 
 .nav__item {
   display: flex;
   align-items: center;
+  display: none;
 }
 
 .nav__link {
@@ -53,6 +55,7 @@
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
   }
+    display: none;
 }
 
 .nav__link.current {
@@ -70,17 +73,20 @@
   background-color: $accent-color;
   position: absolute;
   display: block;
+  display: none;
 }
 
 .contacts__list {
   display: flex;
   margin-left: auto;
   gap: 50px;
+  display: none;
 }
 
 .contacts__item {
   display: flex;
   align-items: center;
+  display: none;
 }
 
 .contacts__link {
@@ -98,6 +104,7 @@
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
   }
+    display: none;
 }
 
 .contacts__icon {
@@ -117,4 +124,88 @@
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
   }
+    display: none;
 }
+.header-open-btn{
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-left: auto;
+}
+
+.header-open-btn:hover,
+.header-open-btn:focus{
+  fill: $accent-color;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  width: 100vw; 
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 1;
+  padding: 21px 21px 48px 40px;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: scroll;
+}
+
+
+.header-close-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-left: auto;
+  margin-bottom: 8px;
+  display: block;
+}
+.header-close-btn:hover,
+.header-close-btn:focus {
+  fill: $accent-color;
+}
+
+.mob-nav-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-nav-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+  text-decoration: none;
+}
+
+.mob-list {} 
+
+.mob-item {}
+
+.mob-link {}
+
+.mob-soc-list {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.mob-soc-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+}
+
+.mob-soc-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}
+

@@ -10,7 +10,16 @@
 }
 
 .portfolio-item {
-  position: relative;
+  width: 100%;
+  
+    @include tablet {
+     @include calc(2, 30px);
+      }
+  
+    @include desktop {
+    @include calc(3, 30px);
+      }
+  
 }
 
 .portfolio-product:hover .portfolio-top-text,
@@ -23,6 +32,11 @@
 
 .portfolio-product {
   text-decoration: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+
   &:hover,
   &:focus {
     display: block;
@@ -56,6 +70,8 @@
 
 .portfolio-subtitle {
   border: 1px solid #eeeeee;
+  border-top: none;
+  flex-grow: 1;
 }
 
 .portfolio-item-title {
@@ -65,9 +81,8 @@
   line-height: 2;
   letter-spacing: 0.06em;
 
-  padding-left: 24px;
-  padding-top: 20px;
-  margin-bottom: 4px;
+  padding: 24px 20px 4px 20px;
+ 
 }
 
 .portfolio-item-text {

@@ -10,11 +10,12 @@
   color: $title-text-color;
   margin-bottom: 30px;
   @include tablet {
-      width: 768px;
+      font-size: 28px;
+      line-height: 1.17;
+      margin-bottom: 30px;
     }
   
-    @include desctop {
-      width: 1200px;
+    @include desktop {
       font-size: 36px;
       line-height: 1.16;
       margin-bottom: 50px;
@@ -23,7 +24,20 @@
 
 .team__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+}
+
+.team__item{
+  width: 100%;
+
+    @include tablet {
+      @include calc(2, 30px);
+    }
+  
+    @include desktop {
+      @include calc(4, 30px);
+    }
 }
 
 .team__icon {

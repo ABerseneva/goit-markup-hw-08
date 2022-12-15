@@ -1,9 +1,17 @@
 .feature {
-  padding-top: 94px;
-  padding-bottom: 94px;
   &__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+  }
+  &__item{
+      @include tablet {
+        @include calc(2, 30px);
+      }
+    
+      @include desktop {
+        @include calc(4, 30px);
+      }
   }
   &__wrap {
     background-color: #f5f4fa;

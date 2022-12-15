@@ -1,17 +1,19 @@
-@import "./utils/variables";
-@import "./utils/hide";
+@import "./utils/_variables";
+@import "./utils/_mixins";
+@import "./base/_reset";
 
-@import "./base/common";
-@import "./base/reset";
 
-@import "./layouts/header";
-@import "./layouts/hero";
-@import "./layouts/feature";
-@import "./layouts/produce";
-@import "./layouts/team";
-@import "./layouts/clients";
-@import "./layouts/footer";
-@import "./layouts/filter";
-@import "./layouts/portfolio";
+@import "./utils/_hide";
+@import "./base/_common";
 
-@import "./components/modal";
+@import "./layouts/_header";
+@import "./layouts/_hero";
+@import "./layouts/_feature";
+@import "./layouts/_produce";
+@import "./layouts/_team";
+@import "./layouts/_clients";
+@import "./layouts/_footer";
+@import "./layouts/_filter";
+@import "./layouts/_portfolio";
+
+@import "./components/_modal";

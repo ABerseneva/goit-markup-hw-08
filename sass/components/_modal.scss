@@ -8,8 +8,8 @@
 }
 
 .modal {
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   background-color: $color-white;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -19,6 +19,11 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 400ms linear;
+  
+    @include desktop {
+      min-width: 528px;
+      min-height: 581px;
+    }
 }
 
 .backdrop.is-hidden .modal {
@@ -61,6 +66,10 @@
   letter-spacing: 0.03em;
   color: $title-text-color;
   padding-bottom: 12px;
+  @include desktop {
+    font-size: 20px;
+    line-height: 1.5;
+    }
 }
 .modal-label {
   display: block;
@@ -87,6 +96,22 @@
     transition-timing-function: $timing-function;
   }
 }
+// .modal-input {
+//   border: 1px solid rgba(33, 33, 33, 0.2);
+//   border-radius: 4px;
+//   outline: transparent;
+//   height: 40px;
+//   width: 100%;
+//   text-indent: 42px;
+//   .modal-label:hover &,
+//   .modal-label:focus & {
+//     border: 1px solid #2196f3;
+//     border-radius: 4px;
+//     transition-property: border;
+//     transition-duration: 250ms;
+//     transition-timing-function: $timing-function;
+//   }
+// }
 .modal-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -94,8 +119,9 @@
   height: 40px;
   width: 100%;
   text-indent: 42px;
-  .modal-label:hover &,
-  .modal-label:focus & {
+
+  .modal-label &:hover  ,
+  .modal-label &:focus  {
     border: 1px solid #2196f3;
     border-radius: 4px;
     transition-property: border;
@@ -159,8 +185,15 @@
   display: flex;
   align-items: center;
   position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
   padding-top: 20px;
   padding-bottom: 30px;
+  @include desktop {
+      font-size: 14px;
+      line-height: 1.71;
+    }
 }
 .check-text span {
   width: 16px;
@@ -183,10 +216,14 @@
 .privacy-link {
   margin-left: 5px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: $accent-color;
   text-decoration: underline;
   text-decoration-skip-ink: none;
+  @include desktop {
+      font-size: 14px;
+      line-height: 1.71;
+    }
 }

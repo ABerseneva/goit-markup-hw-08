@@ -1,23 +1,38 @@
 .clients-title {
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
 
   color: $title-text-color;
-  padding-top: 94px;
-  padding-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  
+    @include desktop {
+      font-size: 36px;
+      line-height: 1.16;
+      margin-top: 94px;
+      margin-bottom: 50px;
+    }
 }
 
 .client-list {
   gap: 30px;
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 94px;
 }
 
 .clients-item {
-  width: calc((100% - 150px) / 6);
-  height: 90px;
+  @include calc(2, 30px);
+
+  @include tablet {
+      @include calc(3, 30px);
+    }
+  
+    @include desktop {
+      @include calc(6, 30px);
+    }
 }
 
 .clients-link {

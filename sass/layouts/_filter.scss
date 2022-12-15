@@ -1,13 +1,31 @@
 .filter {
   background-color: $background-color;
-  padding-top: 94px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  @include tablet {
+      font-size: 28px;
+      line-height: 1.17;
+      padding-bottom: 30px;
+    }
+  
+    @include desktop {
+      padding-bottom: 30px;
+    }
+
 }
 
 .filter-list {
   display: flex;
-  gap: 8px;
-  justify-content: center;
+  gap: 15px 8px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  @include tablet {
+    justify-content: center;
+    }
+  
+    @include desktop {
+    justify-content: center;
+    }
 }
 
 .filter-button {
