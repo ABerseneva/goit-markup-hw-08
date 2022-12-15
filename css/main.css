@@ -300,7 +300,7 @@ body {
   background-position: 50%;
   max-width: 480px;
   min-height: 400px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.png);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../im);
   background-color: #2f303a;
 }
 @media screen and (min-width: 768px) {
