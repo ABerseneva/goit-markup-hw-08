@@ -15,13 +15,18 @@
 .nav__logo {
   font-family: Raleway, serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: $color-black;
-  // margin-right: 93px;
+  @include tablet{margin-right: 88px;}
+  @include desktop {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.19;}
 }
+
 
 .logo-accent {
   color: $accent-color;
@@ -31,66 +36,90 @@
   display: flex;
   gap: 50px;
   display: none;
+  @include tablet {display: flex;
+    gap: 50px;}
+  @include desktop {
+    }
 }
 
 .nav__item {
   display: flex;
   align-items: center;
   display: none;
+  @include tablet {
+      display: flex;
+      align-items: center;
+    }
 }
 
 .nav__link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: $title-text-color;
-  position: relative;
-  display: block;
-  padding: 32px 0;
-  &:hover,
-  &:focus {
-    color: $accent-color;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
-  }
     display: none;
-}
+        @include tablet {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 1.14;
+          letter-spacing: 0.02em;
+          text-decoration: none;
+          color: $title-text-color;
+          position: relative;
+          display: block;
+           padding: 32px 0;
+          
+            &:hover,
+            &:focus {
+              color: $accent-color;
+              transition-duration: 250ms;
+              transition-timing-function: $timing-function;
+            }
+
+        }
+      }
 
 .nav__link.current {
   color: $accent-color;
 }
 
 .current::after {
-  content: "";
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  bottom: -1px;
-  border-radius: 2px;
-  background-color: $accent-color;
-  position: absolute;
-  display: block;
   display: none;
+  @include tablet {
+    content: "";
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      bottom: -1px;
+      border-radius: 2px;
+      background-color: $accent-color;
+      position: absolute;
+      display: block;
+  }
 }
 
 .contacts__list {
-  display: flex;
-  margin-left: auto;
-  gap: 50px;
   display: none;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 90px;
+  }
+   @include desktop{
+    margin-left: auto;
+    gap: 50px;
+   }
 }
 
 .contacts__item {
-  display: flex;
-  align-items: center;
   display: none;
+  @include tablet{
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contacts__link {
-  color: $primary-text-color;
+  display: none;
+    @include tablet{color: $primary-text-color;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -103,12 +132,11 @@
     color: $accent-color;
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
-  }
-    display: none;
+  }}
 }
 
 .contacts__icon {
-  fill: $primary-text-color;
+  @include tablet{fill: $primary-text-color;
   margin-right: 10px;
   transition-duration: 250ms;
   transition-timing-function: $timing-function;
@@ -123,9 +151,10 @@
     fill: $accent-color;
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
-  }
-    display: none;
+  }}
 }
+
+
 .header-open-btn{
   width: 40px;
   height: 40px;
@@ -133,11 +162,17 @@
   border: none;
   padding: 0;
   margin-left: auto;
+  @include tablet {
+      display: none;
+    }
 }
 
 .header-open-btn:hover,
 .header-open-btn:focus{
   fill: $accent-color;
+  @include tablet {
+      display: none;
+    }
 }
 .mobile-menu {
   position: fixed;
@@ -153,6 +188,9 @@
   flex-direction: column;
   justify-content: space-between;
   overflow: scroll;
+  @include tablet {
+      display: none;
+    }
 }
 
 
@@ -165,14 +203,23 @@
   margin-left: auto;
   margin-bottom: 8px;
   display: block;
+  @include tablet {
+      display: none;
+    }
 }
 .header-close-btn:hover,
 .header-close-btn:focus {
   fill: $accent-color;
+  @include tablet {
+      display: none;
+    }
 }
 
 .mob-nav-item:not(:last-child) {
   margin-bottom: 32px;
+  @include tablet {
+      display: none;
+    }
 }
 
 .mob-nav-link {
@@ -182,23 +229,59 @@
   letter-spacing: 0.02em;
   color: $title-text-color;
   text-decoration: none;
+  @include tablet {
+      display: none;
+    }
 }
-
-.mob-list {} 
-
-.mob-item {}
-
-.mob-link {}
+.mob-nav-link:hover,
+.mob-nav-link:focus{
+  color: $accent-color;
+  @include tablet {
+      display: none;
+    }
+}
+.mob-list{
+  margin-bottom: 15px;
+  @include tablet {
+      display: none;
+    }
+}
+.mob-link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+  @include tablet {
+      display: none;
+    }
+}
+.mob-link:hover,
+.mob-link:focus{
+  color: $accent-color;
+  font-size: 34px;
+  line-height: 1.17;
+  @include tablet {
+      display: none;
+    }
+}
 
 .mob-soc-list {
   display: flex;
   gap: 10px;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  @include tablet {
+      display: none;
+    }
 }
 
 .mob-soc-item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 10px;
+  @include tablet {
+      display: none;
+    }
 }
 
 .mob-soc-link {
@@ -207,5 +290,6 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: $accent-color;
+  @include tablet{display: none;}
 }
 

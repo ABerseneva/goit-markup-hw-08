@@ -89,29 +89,14 @@
   position: absolute;
   left: 12px;
   fill: $title-text-color;
-  .modal-label:hover &,
-  .modal-label:focus & {
+  .modal-input:hover, .modal-input:hover &
+  {
     fill: $accent-color;
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
   }
 }
-// .modal-input {
-//   border: 1px solid rgba(33, 33, 33, 0.2);
-//   border-radius: 4px;
-//   outline: transparent;
-//   height: 40px;
-//   width: 100%;
-//   text-indent: 42px;
-//   .modal-label:hover &,
-//   .modal-label:focus & {
-//     border: 1px solid #2196f3;
-//     border-radius: 4px;
-//     transition-property: border;
-//     transition-duration: 250ms;
-//     transition-timing-function: $timing-function;
-//   }
-// }
+
 .modal-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -120,8 +105,8 @@
   width: 100%;
   text-indent: 42px;
 
-  .modal-label &:hover  ,
-  .modal-label &:focus  {
+   &:hover  ,
+   &:focus  {
     border: 1px solid #2196f3;
     border-radius: 4px;
     transition-property: border;
